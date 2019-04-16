@@ -52,7 +52,8 @@
                 <br />
                 <br />
                 <br />
-                <asp:Button ID="Button1" runat="server" Text="Next" />
+                <a href="Booking_food.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Next</a>
+              
               </div>
     </div>
         
