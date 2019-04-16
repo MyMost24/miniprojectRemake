@@ -1,17 +1,25 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Booking.aspx.cs" Inherits="About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-6" style=" background-color:darkgray;">
+                
+                    <div class="col-lg-12" style="margin-top : 10px;" >
+                        <img src="img/ชั้น1.jpg" width="400" height="300" style="width: 500px; height: 400px;">
+                    </div>
+                    <div class="col-lg-12" style="margin-top : 10px;" >
+                        <img src="img/ชั้น2.jpg" width="400" height="300" style=" height: 400px; width: 500px;">
+                    </div>
+                    <div class="col-lg-12" style="margin-top : 10px;" >
+                        <img src="img/ชั้น3.jpg" width="400" height="300" style="width: 500px; height: 400px;">
+                    </div>
+                
+            </div>
 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <table class="nav-justified" style="height: 456px; margin-bottom: 0px">
-        <tr>
-            <td style="height: 384px; width: 653px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Image ID="Image1" runat="server" Height="316px" Width="445px" />
-            </td>
-            <td style="height: 384px; margin-left: 40px">ชื่อ :&nbsp;
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <div class="col-lg-6 fixed-top" style="margin-top : 20px ;">
+                   ชื่อ :&nbsp;
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 <br />
                 <br />
                 เบอโทร :
@@ -32,7 +40,7 @@
                 <asp:TextBox ID="TextBox3" runat="server" Width="40px"></asp:TextBox>
                 <br />
                 <br />
-                วันที่ :<asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                วันที่ :<asp:Calendar ID="Calendar1" runat="server" Height="158px" Width="296px"></asp:Calendar>
                 <br />
                 เวลา :
                 <input id="Text1" type="text" /> น.<br />
@@ -44,13 +52,15 @@
                 <br />
                 <br />
                 <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="Button1" runat="server" Text="Next" />
-            </td>
-        </tr>
-    </table>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    
+              </div>
+    </div>
+        
+           
 
+        </div>
+    
+    
+   
 
 </asp:Content>
