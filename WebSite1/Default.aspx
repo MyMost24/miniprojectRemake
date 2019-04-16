@@ -3,16 +3,23 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT [F_img], [F_name], [F_price] FROM [Food]"></asp:SqlDataSource>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <div class="row">
-        <div class="col-lg-10">
-           <h1>Menuอาหาร</h1>
+&nbsp;<br />
+    <br />
+    
+&nbsp;<div class="row" style="background-color:darkgray">
+
+        <div class="col-lg-12" style="margin-top:10px ; margin-bottom:10px">
+            <asp:Button ID="Button1" runat="server"  BackColor="#FF6600" ForeColor="#CCCCCC" Height="31px" Text="จองโต๊ะ" Width="167px" BorderColor="Black" PostBackUrl="~/Booking.aspx" />
+            <br />
+            <br />
+
+           <h2>Menu</h2>
             <br />
             <br />
             
             <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
                 <AlternatingItemTemplate>
-                    <td runat="server" style="">F_img:
+                    <td runat="server" style="">
                         <asp:Label ID="F_imgLabel" runat="server" Text='<%# Eval("F_img") %>' />
                         <br />
                         F_name:
@@ -24,7 +31,7 @@
                     </td>
                 </AlternatingItemTemplate>
                 <EditItemTemplate>
-                    <td runat="server" style="">F_img:
+                    <td runat="server" style="">
                         <asp:TextBox ID="F_imgTextBox" runat="server" Text='<%# Bind("F_img") %>' />
                         <br />
                         F_name:
@@ -45,7 +52,7 @@
                     </table>
                 </EmptyDataTemplate>
                 <InsertItemTemplate>
-                    <td runat="server" style="">F_img:
+                    <td runat="server" style="">
                         <asp:TextBox ID="F_imgTextBox" runat="server" Text='<%# Bind("F_img") %>' />
                         <br />F_name:
                         <asp:TextBox ID="F_nameTextBox" runat="server" Text='<%# Bind("F_name") %>' />
@@ -57,13 +64,13 @@
                     </td>
                 </InsertItemTemplate>
                 <ItemTemplate>
-                    <td runat="server" style="">F_img:
+                    <td runat="server" style="">
                         <asp:Label ID="F_imgLabel" runat="server" Text='<%# Eval("F_img") %>' />
                         <br />
-                        F_name:
+                        ชื่อ :
                         <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
                         <br />
-                        F_price:
+                        ราคา :
                         <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
                         <br />
                     </td>
@@ -78,22 +85,18 @@
                     </div>
                 </LayoutTemplate>
                 <SelectedItemTemplate>
-                    <td runat="server" style="">F_img:
+                    <td runat="server" style="">
                         <asp:Label ID="F_imgLabel" runat="server" Text='<%# Eval("F_img") %>' />
                         <br />
-                        F_name:
+                        ชื่อ :
                         <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
                         <br />
-                        F_price:
+                        ราคา :
                         <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
                         <br />
                     </td>
                 </SelectedItemTemplate>
             </asp:ListView>
-        </div>
-
-        <div class="col-lg-2">
-              eiei
         </div>
     </div>
 </asp:Content>
