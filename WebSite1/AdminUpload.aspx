@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.master" AutoEventWireup="true" CodeFile="AdminUpload.aspx.cs" Inherits="AdminUpload" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <div class="container" style="margin-top: 30px;">
+    <div class="container" style="margin-top:30px;">
         <h1>เพิ่มเมนูอาหาร</h1>
         <br />
         <div class="row">
@@ -12,20 +12,16 @@
                 </label>
             </div>
         </div>
-        ชื่ออาหาร :
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        ราคา :
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <a href="Admin.aspx" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Cancel</a>
-        <a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Submit</a>
-
     </div>
-  
-   
+   ชื่ออาหาร : <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    <br />
+    <br />
+    ราคา : <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+    <br />
+    <br />
+    <a href="Admin.aspx" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Cancel</a>
+    <a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Submit</a>
+    
            
     
 
