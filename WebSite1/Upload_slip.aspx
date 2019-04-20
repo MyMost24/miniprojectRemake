@@ -4,9 +4,9 @@
 
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;<asp:Label ID="Label1" runat="server" BackColor="White" Font-Size="XX-Large" ForeColor="#666666" Text="โอนเงิน"></asp:Label>
+    &nbsp;<asp:Label ID="Label1" runat="server" BackColor="White" Font-Size="XX-Large" ForeColor="#333333" Text="โอนเงิน"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Label ID="Label2" runat="server" BackColor="White" Font-Size="XX-Large" ForeColor="#666666" Text="ส่งใบสลิปการโอนเงิน"></asp:Label>
+    <asp:Label ID="Label2" runat="server" BackColor="White" Font-Size="XX-Large" ForeColor="#333333" Text="ส่งใบสลิปการโอนเงิน"></asp:Label>
     <br />
     <br />
     <div class="container">
@@ -21,13 +21,13 @@
 
          <div class="row" style="margin-top:10px">
              <div class="col-lg-4" > 
-                  <a href="#" class="badge badge-secondary" style="font-size: 20px; width: 190px;">ธนาคารกรุงไทย</a>
+                  <a href="#" class="badge badge-secondary" style="font-size: 20px; width: 190px; background-color: #333333; color: #FFFFFF;">ธนาคารกรุงไทย</a>
              </div>
              <div class="col-lg-4"  > 
-                  <a href="#" class="badge badge-secondary" style="font-size: 20px; width: 190px;">ธนาคารไทยพานิชย์</a>
+                  <a href="#" class="badge badge-secondary" style="font-size: 20px; width: 190px; color: #FFFFFF; background-color: #333333;">ธนาคารไทยพานิชย์</a>
              </div>
              <div class="col-lg-4" > 
-                  <a href="#" class="badge badge-secondary" style="font-size: 20px; width: 190px;">ธนาคารออมสิน</a>
+                  <a href="#" class="badge badge-secondary" style="font-size: 20px; width: 190px; color: #FFFFFF; background-color: #333333;">ธนาคารออมสิน</a>
              </div>
          </div>
 
@@ -51,13 +51,13 @@
     
          <div class="row" style="margin-top:10px">
              <div class="col-lg-4" > 
-                  <a href="#" class="badge badge-secondary" style="font-size: 15px; width: 150px;">111-22222-3</a>
+                  <a href="#" class="badge badge-secondary" style="font-size: 15px; width: 150px; background-color: #333333; color: #FFFFFF;">111-22222-3</a>
              </div>
              <div class="col-lg-4"  > 
-                  <a href="#" class="badge badge-secondary" style="font-size: 15px; width: 150px;">111-22222-3</a>
+                  <a href="#" class="badge badge-secondary" style="font-size: 15px; width: 150px; color: #FFFFFF; background-color: #333333;">111-22222-3</a>
              </div>
              <div class="col-lg-4" > 
-                  <a href="#" class="badge badge-secondary" style="font-size: 15px; width: 150px;">111-22222-3</a>
+                  <a href="#" class="badge badge-secondary" style="font-size: 15px; width: 150px; color: #FFFFFF; background-color: #333333;">111-22222-3</a>
              </div>
          </div>
         <div class="row" style="margin-top:20px">
@@ -76,9 +76,9 @@
       <br />
       <br />
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="Booking_food.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Back</a>
+      <a href="Booking_food.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="background-color: #C0C0C0">Back</a>
 &nbsp;&nbsp;&nbsp;
-      <a href="Bill.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Next</a>
+      <a href="Bill.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="background-color: #C0C0C0">Next</a>
       <br />
 
   </div>
