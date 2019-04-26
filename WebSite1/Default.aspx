@@ -9,7 +9,7 @@
 &nbsp;<div class="row" style="background-color:darkgray">
 
         <div class="col-lg-12" style="margin-top:10px ; margin-bottom:10px">
-            <asp:Button ID="Button1" runat="server"  BackColor="#FF6600" ForeColor="#CCCCCC" Height="31px" Text="จองโต๊ะ" Width="167px" BorderColor="Black" PostBackUrl="~/Booking.aspx" />
+            <a href="Booking.aspx" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">จองโต๊ะ</a>
             <br />
             <br />
 
@@ -22,10 +22,10 @@
                     <td runat="server" style="">
                         <asp:Label ID="F_imgLabel" runat="server" Text='<%# Eval("F_img") %>' />
                         <br />
-                        F_name:
+                        
                         <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
                         <br />
-                        F_price:
+                        ราคา :
                         <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
                         <br />
                     </td>

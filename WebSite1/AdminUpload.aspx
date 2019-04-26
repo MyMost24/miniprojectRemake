@@ -5,22 +5,22 @@
         <h1>เพิ่มเมนูอาหาร</h1>
         <br />
         <div class="row">
-            <div class="col-sm-2 imgUp">
-                <div class="imagePreview"></div>
-                <label class="btn btn-primary" id="btn_upimg">
-                    Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px; height: 0px; overflow: hidden;">
-                </label>
-            </div>
+            <asp:FileUpload ID="FileUpload1" runat="server" />
         </div>
     </div>
+    <br />
+    <br />
    ชื่ออาหาร : <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
     <br />
     <br />
     ราคา : <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
     <br />
     <br />
-    <a href="Admin.aspx" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Cancel</a>
-    <a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Submit</a>
+
+    <asp:Button ID="Button2" class="btn btn-danger" runat="server" Text="Cancel" PostBackUrl="~/Admin.aspx" Height="38px" Width="79px" />
+    &nbsp;<asp:Button ID="Button1" class="btn btn-success" runat="server" Height="38px" OnClick="Button1_Click" Text="Button" Width="79px" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Label ID="alert" runat="server" Text="Upload Success" Visible="False"></asp:Label>
     
            
     

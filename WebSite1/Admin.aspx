@@ -14,64 +14,21 @@
             <h1>MENU</h1>
             <br />
             <br />
-            <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
-                <AlternatingItemTemplate>
-                    <td runat="server" style="">F_img:
-                <asp:Label ID="F_imgLabel" runat="server" Text='<%# Eval("F_img") %>' />
-                        <br />
-                        F_name:
-                <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
-                        <br />
-                        F_price:
-                <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
-                        <br />
-                    </td>
-                </AlternatingItemTemplate>
-                <EditItemTemplate>
-                    <td runat="server" style="">F_img:
-                <asp:TextBox ID="F_imgTextBox" runat="server" Text='<%# Bind("F_img") %>' />
-                        <br />
-                        F_name:
-                <asp:TextBox ID="F_nameTextBox" runat="server" Text='<%# Bind("F_name") %>' />
-                        <br />
-                        F_price:
-                <asp:TextBox ID="F_priceTextBox" runat="server" Text='<%# Bind("F_price") %>' />
-                        <br />
-                        <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
-                        <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                    </td>
-                </EditItemTemplate>
-                <EmptyDataTemplate>
-                    <table style="">
-                        <tr>
-                            <td>No data was returned.</td>
-                        </tr>
-                    </table>
-                </EmptyDataTemplate>
-                <InsertItemTemplate>
-                    <td runat="server" style="">F_img:
-                <asp:TextBox ID="F_imgTextBox" runat="server" Text='<%# Bind("F_img") %>' />
-                        <br />
-                        F_name:
-                <asp:TextBox ID="F_nameTextBox" runat="server" Text='<%# Bind("F_name") %>' />
-                        <br />
-                        F_price:
-                <asp:TextBox ID="F_priceTextBox" runat="server" Text='<%# Bind("F_price") %>' />
-                        <br />
-                        <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
-                        <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
-                    </td>
-                </InsertItemTemplate>
+            <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
+              
                 <ItemTemplate>
-                    <td runat="server" style="">F_img:
-                <asp:Label ID="F_imgLabel" runat="server" Text='<%# Eval("F_img") %>' />
+                    <td runat="server" class="text-center">
+                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("F_img") %>' Height="200" Width="200" />
                         <br />
-                        F_name:
+                        <br />
                 <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
                         <br />
-                        F_price:
+                        ราคา :
                 <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
                         <br />
+                       
+                        <asp:Button ID="Button1" runat="server" Text="Edit" CommandName="Edit_Button" CommandArgument='<%# Eval("F_id") %>'/>
+                        <asp:Button ID="Button2" runat="server" Text="Delete" CommandName="Delete_Button" CommandArgument='<%# Eval("F_id") %>'/>
                     </td>
                 </ItemTemplate>
                 <LayoutTemplate>
@@ -83,20 +40,8 @@
                     <div style="">
                     </div>
                 </LayoutTemplate>
-                <SelectedItemTemplate>
-                    <td runat="server" style="">F_img:
-                <asp:Label ID="F_imgLabel" runat="server" Text='<%# Eval("F_img") %>' />
-                        <br />
-                        F_name:
-                <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
-                        <br />
-                        F_price:
-                <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
-                        <br />
-                    </td>
-                </SelectedItemTemplate>
             </asp:ListView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT [F_img], [F_name], [F_price] FROM [Food]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT [F_img], [F_name], [F_price], [F_id] FROM [Food]"></asp:SqlDataSource>
         </div>
     </div>
 
