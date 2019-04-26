@@ -6,10 +6,15 @@
 &nbsp;<br />
     <br />
     
-&nbsp;<div class="row" style="background-color:darkgray">
+&nbsp;<div class="row" style="border-style: groove; border-color: #FFFFFF; background-color:#C0C0C0; width: 1277px; margin-left: 281px;">
 
+<<<<<<< HEAD
         <div class="col-lg-12" style="margin-top:10px ; margin-bottom:10px">
             <a href="Booking.aspx" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">จองโต๊ะ</a>
+=======
+        <div class="col-lg-12" style="margin-top:10px; margin-bottom:10px; left: -126px; top: -1px; width: 1234px; height: 254px; margin-left: 143px;">
+            <asp:Button ID="Button1" runat="server"  BackColor="#FF6600" ForeColor="#CCCCCC" Height="31px" Text="จองโต๊ะ" Width="167px" BorderColor="Black" PostBackUrl="~/Booking.aspx" />
+>>>>>>> 03cc0a9bb7c499f1d793e71c6ae6b67f175c3dea
             <br />
             <br />
 

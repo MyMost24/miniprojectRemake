@@ -32,15 +32,15 @@
                 </asp:ListView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT [F_img], [F_name], [F_price] FROM [Food]"></asp:SqlDataSource>
             </div>
-            <div class="contrainer col-lg-4" style="background-color: white">
+            <div class="contrainer col-lg-4" style="background-color: white; left: 0px; top: 0px; height: 456px;">
                 <p>รายการอาหาร</p>
                 <hr />
                 <div class="row">
-                    <p>ยอดรว</p>
-                <div class="row contrainer" style="background-color:darkgray;height:150px">
+                    <p>ยอดรวม</p>
+                <div class="row contrainer" style="background-color:#ECFFFF; height:150px">
                     <div class="col-sm-6" style="margin-top:5px;">ชื่อ</div> 
                     <div class="col-sm-3">จำนวน</div>       
-                    <div class="col-sm-3">ราคา</div>       
+                    <div class="col-sm-3" style="left: 0px; top: 0px">ราคา</div>       
                 </div>
                     <p>ยอดรวม </p> <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     <br />
@@ -48,7 +48,8 @@
                     <p>ค่ามัดจำ(50%ของยอดรวม)</p> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                     <br />
                     <br />
-                    <a href="Upload_slip.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Next</a>
+                    <br />
+                    <a href="Upload_slip.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="background-color: #C0C0C0">Next</a>
                
                 </div>
                  
