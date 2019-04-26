@@ -6,9 +6,9 @@
 &nbsp;<br />
     <br />
     
-&nbsp;<div class="row" style="border-style: groove; border-color: #FFFFFF; background-color:#C0C0C0">
+&nbsp;<div class="row" style="border-style: groove; border-color: #FFFFFF; background-color:#C0C0C0; width: 1277px; margin-left: 281px;">
 
-        <div class="col-lg-12" style="margin-top:10px; margin-bottom:10px; left: 1px; top: 0px; width: 1469px; height: 254px;">
+        <div class="col-lg-12" style="margin-top:10px; margin-bottom:10px; left: -126px; top: -1px; width: 1234px; height: 254px; margin-left: 143px;">
             <asp:Button ID="Button1" runat="server"  BackColor="#FF6600" ForeColor="#CCCCCC" Height="31px" Text="จองโต๊ะ" Width="167px" BorderColor="Black" PostBackUrl="~/Booking.aspx" />
             <br />
             <br />

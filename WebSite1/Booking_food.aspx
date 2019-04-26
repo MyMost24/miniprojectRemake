@@ -86,7 +86,7 @@
                 </asp:ListView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT [F_img], [F_name], [F_price] FROM [Food]"></asp:SqlDataSource>
             </div>
-            <div class="contrainer col-lg-4" style="background-color: white">
+            <div class="contrainer col-lg-4" style="background-color: white; left: 0px; top: 0px; height: 456px;">
                 <p>รายการอาหาร</p>
                 <hr />
                 <div class="row">
@@ -100,6 +100,7 @@
                     <br />
                     <br />
                     <p>ค่ามัดจำ(50%ของยอดรวม)</p> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <br />
                     <br />
                     <br />
                     <a href="Upload_slip.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="background-color: #C0C0C0">Next</a>
