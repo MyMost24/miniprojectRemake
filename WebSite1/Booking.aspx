@@ -66,7 +66,7 @@
                         <br />
                         <br />
                         <br />
-                        <a href="Booking_food.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="background-color: #C0C0C0">Next</a>
+                        <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" Text="Next" OnClick="Button2_Click" />
 
                     </div>
                 </div>

@@ -12,16 +12,18 @@ using System.Web.UI.WebControls;
 /// </summary>
 public class Showitem
 {
-    public string fName { get; set; }
-    public int fNum { get; set; }
-    public int fSum { get; set; }
-    public int fDeposit { get; set; }
+    public string F_name { get; set; }
+    public int F_id { get; set; }
+    public int Bill_id { get; set; }
+    public int Amount { get; set; }
+    public int F_price { get; set; }
 
     public Showitem(string fName, int fNum, int fSum,int fDeposit)
     {
-        this.fName = fName;
-        this.fNum = fNum;
-        this.fSum = fSum;
-        this.fDeposit = fDeposit;
+        this.F_name = F_name;
+        this.F_id = F_id;
+        this.Amount = Amount;
+        this.F_price = F_price;
+        this.Bill_id = Bill_id;
     }
 }

@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content" style="background-image: url('/img/bread1.jpg'); height: 837px; width: 2030px;  margin-left: 0px; margin-right: 33px; ">
+        <div class="container body-content" style="background-image: url('/img/bread1.jpg'); height: 837px; width: 1690px;  margin-left: 0px; margin-right: 33px; ">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

@@ -27,8 +27,8 @@
                 <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
                         <br />
                        
-                        <asp:Button ID="Button1" runat="server" Text="Edit" CommandName="Edit_Button" CommandArgument='<%# Eval("F_id") %>'/>
-                        <asp:Button ID="Button2" runat="server" Text="Delete" CommandName="Delete_Button" CommandArgument='<%# Eval("F_id") %>'/>
+                        <asp:Button ID="Button1" CssClass="btn btn-dark" runat="server" Text="Edit" CommandName="Edit_Button" CommandArgument='<%# Eval("F_id") %>'/>
+                        <asp:Button ID="Button2" CssClass="btn btn-danger" runat="server" Text="Delete" CommandName="Delete_Button" CommandArgument='<%# Eval("F_id") %>'/>
                     </td>
                 </ItemTemplate>
                 <LayoutTemplate>

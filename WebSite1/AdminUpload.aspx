@@ -18,7 +18,7 @@
     <br />
 
     <asp:Button ID="Button2" class="btn btn-danger" runat="server" Text="Cancel" PostBackUrl="~/Admin.aspx" Height="38px" Width="79px" />
-    &nbsp;<asp:Button ID="Button1" class="btn btn-success" runat="server" Height="38px" OnClick="Button1_Click" Text="Button" Width="79px" />
+    &nbsp;<asp:Button ID="Button1" class="btn btn-success" runat="server" Height="38px" OnClick="Button1_Click" Text="Upload" Width="79px" />
     &nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Label ID="alert" runat="server" Text="Upload Success" Visible="False"></asp:Label>
     
