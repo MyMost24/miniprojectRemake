@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
 
         <div class="row" style="margin-top:30px;">
-            <div class="col-lg-7">
+            <div class="col-lg-7" style="margin-left:20px;">
                 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
                     
                     
@@ -17,6 +17,10 @@
                             ราคา :
                             <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
                             <br />
+                            <asp:TextBox  ID="Numitem" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Add" />
                         </td>
                     </ItemTemplate>
                     <LayoutTemplate>
