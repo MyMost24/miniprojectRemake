@@ -12,7 +12,7 @@
 
                         <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
                         <br />
-                        ราคา :
+                        <p class="h3 ; text-body">ราคา :</p>
                         <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
                         <br />
                         <br />
@@ -46,6 +46,7 @@
                             <asp:HiddenField runat="server" ID="H_id" Value='<%# Eval("F_id") %>'></asp:HiddenField>
                         </ItemTemplate>
                     </asp:TemplateField>
+
                     
                 </Columns>
 
