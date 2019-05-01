@@ -12,7 +12,7 @@
                         
                         <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
                         <br />
-                        ราคา :
+                        <p class="h3 ; text-body">ราคา :</p>
                         <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
                         <br />
                         <asp:TextBox ID="TextBox3" runat="server" TextMode="Number"></asp:TextBox>
@@ -33,12 +33,12 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT [F_img], [F_name], [F_price] FROM [Food]"></asp:SqlDataSource>
             </div>
             <div class="contrainer col-lg-4" style="background-color: white; left: 0px; top: 0px; height: 456px;">
-                <p>รายการอาหาร</p>
+                <p class="h4">รายการอาหาร</p>
                 <hr />
                 <div class="row">
-                    <p>ยอดรวม</p>
+                    <p >ยอดรวม</p>
                 <div class="row contrainer" style="background-color:#ECFFFF; height:150px">
-                    <div class="col-sm-6" style="margin-top:5px;">ชื่อ</div> 
+                    <div class="col-sm-6 " style="margin-top:5px;">ชื่อ</div> 
                     <div class="col-sm-3">จำนวน</div>       
                     <div class="col-sm-3" style="left: 0px; top: 0px">ราคา</div>       
                 </div>
