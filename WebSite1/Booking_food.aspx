@@ -17,7 +17,7 @@
                             ราคา :
                             <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
                             <br />
-                            <asp:TextBox  ID="Numitem" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox  ID="Numitem" runat="server" TextMode="Number" CssClass="form-control" ></asp:TextBox>
                             <br />                          
                             <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Add" CommandName="concon" CommandArgument='<%# Container.DisplayIndex%>'/>
                         </td>

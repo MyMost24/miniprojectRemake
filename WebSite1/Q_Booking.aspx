@@ -2,29 +2,34 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="margin-top: 20px" >
-        <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
+        <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
+
             <ItemTemplate>
-                <td runat="server" style="margin-right: 20px;">ชื่อ :
-                <asp:Label ID="C_nameLabel" runat="server" Text='<%# Eval("C_name") %>'  />
+                <td runat="server" style="">C_name:
+                    <asp:Label ID="C_nameLabel" runat="server" Text='<%# Eval("C_name") %>' />
                     <br />
-                    เบอร์โทร :
-                <asp:Label ID="phone_numberLabel" runat="server" Text='<%# Eval("phone_number") %>' />
+                    phone_number:
+                    <asp:Label ID="phone_numberLabel" runat="server" Text='<%# Eval("phone_number") %>' />
                     <br />
-                    ชั้น :
-                <asp:Label ID="floorLabel" runat="server" Text='<%# Eval("floor") %>' />
+                    floor:
+                    <asp:Label ID="floorLabel" runat="server" Text='<%# Eval("floor") %>' />
                     <br />
-                    ที่นั่ง :
-                <asp:Label ID="seatLabel" runat="server" Text='<%# Eval("seat") %>' />
+                    seat:
+                    <asp:Label ID="seatLabel" runat="server" Text='<%# Eval("seat") %>' />
                     <br />
-                    จำนวนคน :
-                <asp:Label ID="C_numberLabel" runat="server" Text='<%# Eval("C_number") %>' />
+                    C_number:
+                    <asp:Label ID="C_numberLabel" runat="server" Text='<%# Eval("C_number") %>' />
                     <br />
-                    วันที่-เวลา :
-                <asp:Label ID="book_date_timeLabel" runat="server" Text='<%# Eval("book_date_time") %>' />
+                    book_date_time:
+                    <asp:Label ID="book_date_timeLabel" runat="server" Text='<%# Eval("book_date_time") %>' />
                     <br />
-                    ประเภทการจอง :
-                <asp:Label ID="booking_id_typeLabel" runat="server" Text='<%# Eval("booking_id_type") %>' />
+                    booking_id_type:
+                    <asp:Label ID="booking_id_typeLabel" runat="server" Text='<%# Eval("booking_id_type") %>' />
                     <br />
+                    status_id:
+                    <asp:Label ID="status_idLabel" runat="server" Text='<%# Eval("status_id") %>' />
+                    <br />
+                    <asp:Button ID="Button1" CssClass="btn btn-danger" runat="server" Text="Clear" CommandName="Clear_Button" CommandArgument='<%# Eval("booking_id") %>' />
                 </td>
             </ItemTemplate>
             <LayoutTemplate>
@@ -36,8 +41,13 @@
                 <div style="">
                 </div>
             </LayoutTemplate>
+
         </asp:ListView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT [C_name], [phone_number], [floor], [seat], [C_number], [book_date_time], [booking_id_type] FROM [Booking]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT [C_name], [phone_number], [floor], [seat], [C_number], [book_date_time], [booking_id_type], [status_id], [booking_id] FROM [Booking] WHERE ([status_id] = @status_id)">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="1" Name="status_id" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </div>
 </asp:Content>
 

@@ -10,6 +10,7 @@ using System.Data;
 
 public partial class About : Page
 {
+    string getbkid;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -106,9 +107,12 @@ public partial class About : Page
     protected void Button2_Click(object sender, EventArgs e)
     {
         InsertBookDB();
-        if(DropDownListBookingType.SelectedValue == "1")
+        SelectlastRow();
+        if (DropDownListBookingType.SelectedValue == "1")
         {
-            Response.Redirect("~/Bill.aspx");
+            Response.Redirect("~/Bill.aspx?booking_id="+ getbkid);
+
+            
         }
         else
         {
@@ -143,16 +147,30 @@ public partial class About : Page
                 ObjCM.Parameters.AddWithValue("@status_id", "1");
                 ObjCM.Parameters.AddWithValue("@booking_id_type", DropDownListBookingType.SelectedValue);
 
-
-
-
-
-
-
-                ObjCM.ExecuteNonQuery();
+               ObjCM.ExecuteNonQuery();
 
             }
             ObjConn.Close();
+        }
+    }
+    private void SelectlastRow()
+    {
+        string StrConner = WebConfigurationManager.ConnectionStrings["mydbpConnectionString"].ConnectionString;
+        using (SqlConnection ObjConner = new SqlConnection(StrConner))
+        {
+            ObjConner.Open();
+            using (SqlCommand ObjCM = new SqlCommand())
+            {
+                ObjCM.Connection = ObjConner;
+                ObjCM.CommandType = CommandType.StoredProcedure;
+                ObjCM.CommandText = "SelectLastRow";
+                SqlDataReader Doodetail = ObjCM.ExecuteReader();
+                Doodetail.Read();
+                getbkid = Doodetail["booking_id"].ToString();
+                Doodetail.Close();
+
+            }
+            ObjConner.Close();
         }
     }
 }
