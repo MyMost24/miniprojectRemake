@@ -23,30 +23,29 @@
             <br />
             
             <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
-                
+               
                 <ItemTemplate>
-                    <td runat="server" class="text-center" >
-                       <asp:Image ID="Image1" runat="server"  ImageUrl='<%# Eval("F_img") %>' Height="200" Width="200" />
-                        <br />
-                        ชื่อ :
-                        <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
-                        <br />
-                        ราคา :
-                        <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
-                        <br />
-                    </td>
+                    <span style="" class="col-lg-2 text-center">
+                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("F_img") %>' Width="160" Height="160"/>
+                    <br />
+                    
+                    <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
+                    <br />
+                    ราคา :
+                    <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
+                    <br />
+                    <br /></span>
                 </ItemTemplate>
                 <LayoutTemplate>
-                    <table runat="server" border="0" style="">
-                        <tr id="itemPlaceholderContainer" runat="server">
-                            <td id="itemPlaceholder" runat="server"></td>
-                        </tr>
-                    </table>
+                    <div class="row" id="itemPlaceholderContainer" runat="server" style="">
+                        <span runat="server" id="itemPlaceholder" />
+                    </div>
                     <div style="">
                     </div>
                 </LayoutTemplate>
-                
+               
             </asp:ListView>
         </div>
+    </div>
     </div>
 </asp:Content>

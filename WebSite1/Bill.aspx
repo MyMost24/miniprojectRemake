@@ -40,6 +40,6 @@ FROM Booking INNER JOIN book_type ON Booking.booking_id_type = book_type.booking
     <br />
     <br />
     <a href="Booking.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="background-color: #C0C0C0">Back</a>
-    <a href="Succeed.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="background-color: #C0C0C0">Next</a>
+    <a href="Succeed.aspx" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="background-color: #C0C0C0">Confirm</a>
 </asp:Content>
 

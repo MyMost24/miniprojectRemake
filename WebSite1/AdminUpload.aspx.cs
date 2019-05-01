@@ -17,8 +17,9 @@ public partial class AdminUpload : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        
-  
+        if (ChackData() == true)
+        {
+
             string OldFileName = FileUpload1.FileName;
             string Ext = System.IO.Path.GetExtension(FileUpload1.PostedFile.FileName);
             string NewName = Guid.NewGuid().ToString();
@@ -26,9 +27,18 @@ public partial class AdminUpload : System.Web.UI.Page
             string Path = string.Format("img/{0}", cNewname);
             string cPath = Server.MapPath(Path);
             FileUpload1.SaveAs(cPath);
+        
 
-            InsertFileDB(OldFileName, Path);    
-   
+            InsertFileDB(OldFileName, Path);
+
+            
+            Response.Redirect("~/Admin.aspx");
+
+        }
+        else
+        {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMassage", " swal('กรุณากรอกข้อมูล','','error')", true);
+        }
     }
     private void InsertFileDB(string OldFileName, string cPath)
     {
@@ -50,5 +60,18 @@ public partial class AdminUpload : System.Web.UI.Page
             }
             ObjConn.Close();
         }
+    }
+    private bool ChackData()
+    {
+        if(TextBox1.Text.Length <= 0)
+        {
+            return false;
+        }
+        else if(TextBox2.Text.Length <= 0)
+        {
+            return false;
+        }
+
+        return true;
     }
 }

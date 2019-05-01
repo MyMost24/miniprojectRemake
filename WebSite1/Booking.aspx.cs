@@ -106,18 +106,27 @@ public partial class About : Page
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        InsertBookDB();
-        SelectlastRow();
-        if (DropDownListBookingType.SelectedValue == "1")
+        if (ChackData() == true)
         {
-            Response.Redirect("~/Bill.aspx?booking_id="+ getbkid);
+            InsertBookDB();
+            SelectlastRow();
+            if (DropDownListBookingType.SelectedValue == "1" && ChackData() == true)
+            {
 
-            
+                Response.Redirect("~/Bill.aspx?booking_id=" + getbkid);
+
+
+            }
+            else
+            {
+                Response.Redirect("~/Booking_food.aspx");
+            }
         }
         else
         {
-            Response.Redirect("~/Booking_food.aspx");
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMassage", " swal('กรุณากรอกข้อมูลให้ครบถ้วน','','error')", true);
         }
+       
     }
 
     private void InsertBookDB()
@@ -172,5 +181,26 @@ public partial class About : Page
             }
             ObjConner.Close();
         }
+    }
+    private bool ChackData()
+    {
+        if (TextBox1.Text.Length <= 0)
+        {
+            return false;
+        }
+        else if (TextBox2.Text.Length <= 0)
+        {
+            return false;
+        }
+        else if (TextBox3.Text.Length <= 0)
+        {
+            return false;
+        }
+        else if (Calendar1.SelectedDate.Date == DateTime.MinValue.Date)
+        {
+            return false;
+        }
+
+        return true;
     }
 }
