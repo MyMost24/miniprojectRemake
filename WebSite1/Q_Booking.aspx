@@ -4,49 +4,47 @@
     <div style="margin-top: 20px" >
         <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
 
-            <ItemTemplate>
-                <td runat="server" style="">C_name:
-                    <asp:Label ID="C_nameLabel" runat="server" Text='<%# Eval("C_name") %>' />
-                    <br />
-                    phone_number:
-                    <asp:Label ID="phone_numberLabel" runat="server" Text='<%# Eval("phone_number") %>' />
-                    <br />
-                    floor:
-                    <asp:Label ID="floorLabel" runat="server" Text='<%# Eval("floor") %>' />
-                    <br />
-                    seat:
-                    <asp:Label ID="seatLabel" runat="server" Text='<%# Eval("seat") %>' />
-                    <br />
-                    C_number:
-                    <asp:Label ID="C_numberLabel" runat="server" Text='<%# Eval("C_number") %>' />
-                    <br />
-                    book_date_time:
-                    <asp:Label ID="book_date_timeLabel" runat="server" Text='<%# Eval("book_date_time") %>' />
-                    <br />
-                    booking_id_type:
-                    <asp:Label ID="booking_id_typeLabel" runat="server" Text='<%# Eval("booking_id_type") %>' />
-                    <br />
-                    status_id:
-                    <asp:Label ID="status_idLabel" runat="server" Text='<%# Eval("status_id") %>' />
-                    <br />
-                    <asp:Button ID="Button1" CssClass="btn btn-danger" runat="server" Text="Clear" CommandName="Clear_Button" CommandArgument='<%# Eval("booking_id") %>' />
-                </td>
+           <ItemTemplate>
+                <span style="" class="col-lg-3">ชื่อ:
+                <asp:Label ID="C_nameLabel" runat="server" Text='<%# Eval("C_name") %>' />
+                <br />
+                เบอร์โทร:
+                <asp:Label ID="phone_numberLabel" runat="server" Text='<%# Eval("phone_number") %>' />
+                <br />
+                ชั้น:
+                <asp:Label ID="floorLabel" runat="server" Text='<%# Eval("floor") %>' />
+                <br />
+                ที่นั่ง:
+                <asp:Label ID="seatLabel" runat="server" Text='<%# Eval("seat") %>' />
+                <br />                
+                จำนวนคน:
+                <asp:Label ID="C_numberLabel" runat="server" Text='<%# Eval("C_number") %>' />
+                <br />
+                วัน-เวลา:
+                <asp:Label ID="book_date_timeLabel" runat="server" Text='<%# Eval("book_date_time") %>' />
+                <br />
+                ประเภทการจอง:
+                <asp:Label ID="type_nameLabel" runat="server" Text='<%# Eval("type_name") %>' />
+                <br />               
+                <br />
+                <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" Text="Viwe More" CommandName="Viwe_Button" CommandArgument='<%# Eval("booking_id") %>' />
+                <asp:Button ID="Button1" CssClass="btn btn-danger" runat="server" Text="Clear" CommandName="Clear_Button" CommandArgument='<%# Eval("booking_id") %>' />
+                </span>
             </ItemTemplate>
             <LayoutTemplate>
-                <table runat="server" border="0" style="">
-                    <tr id="itemPlaceholderContainer" runat="server">
-                        <td id="itemPlaceholder" runat="server"></td>
-                    </tr>
-                </table>
-                <div style="">
+                <div style="" id="itemPlaceholderContainer" runat="server">
+                    <span runat="server" id="itemPlaceholder" />
+                </div>
+                <div style="" class="row">
                 </div>
             </LayoutTemplate>
 
+
         </asp:ListView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT [C_name], [phone_number], [floor], [seat], [C_number], [book_date_time], [booking_id_type], [status_id], [booking_id] FROM [Booking] WHERE ([status_id] = @status_id)">
-            <SelectParameters>
-                <asp:Parameter DefaultValue="1" Name="status_id" Type="Int32" />
-            </SelectParameters>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbpConnectionString %>" SelectCommand="SELECT        TOP (200) Booking.booking_id, Booking.C_name, Booking.phone_number, Booking.floor, Booking.seat, Booking.C_number, Booking.book_date_time, Booking.status_id, book_type.type_name, Booking.booking_id_type
+FROM            Booking INNER JOIN
+                         book_type ON Booking.booking_id_type = book_type.booking_type_id
+WHERE status_id = '1'">
         </asp:SqlDataSource>
     </div>
 </asp:Content>

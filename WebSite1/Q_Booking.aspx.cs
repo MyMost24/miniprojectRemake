@@ -18,11 +18,15 @@ public partial class Q_Booking : System.Web.UI.Page
     {
         if (e.CommandName == "Clear_Button")
         {
-            DeleteBookingDB(e.CommandArgument.ToString());
+            ClearBookingDB(e.CommandArgument.ToString());
             ListView1.DataBind();
         }
+        else if(e.CommandName == "Viwe_Button")
+        {
+            Response.Redirect("ViweMore.aspx?booking_id=" + e.CommandArgument);
+        }
     }
-    private void DeleteBookingDB(string id)
+    private void ClearBookingDB(string id)
     {
         string StrConn = WebConfigurationManager.ConnectionStrings["mydbpConnectionString"].ConnectionString;
         using (SqlConnection ObjConn = new SqlConnection(StrConn))

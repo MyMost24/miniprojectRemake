@@ -117,9 +117,9 @@ public partial class About : Page
 
 
             }
-            else
+            else if(DropDownListBookingType.SelectedValue == "2" && ChackData() == true)
             {
-                Response.Redirect("~/Booking_food.aspx");
+                Response.Redirect("~/Booking_food.aspx?booking_id=" + getbkid);
             }
         }
         else
@@ -203,4 +203,6 @@ public partial class About : Page
 
         return true;
     }
+
+   
 }

@@ -14,32 +14,32 @@
             <h1>MENU</h1>
             <br />
             <br />
-            
-                <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand" DataKeyNames="F_id">
 
-                    <ItemTemplate>
-                        <span style="" class="col-lg-2 text-center">
-                            <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("F_img") %>' Width="160" Height="160" />
-                            <br />
+            <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand" DataKeyNames="F_id">
 
-                            <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
-                            <br />
-                            ราคา :
+                <ItemTemplate>
+                    <span style="" class="col-lg-2 text-center">
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("F_img") %>' Width="160" Height="160" />
+                        <br />
+
+                        <asp:Label ID="F_nameLabel" runat="server" Text='<%# Eval("F_name") %>' />
+                        <br />
+                        ราคา :
                     <asp:Label ID="F_priceLabel" runat="server" Text='<%# Eval("F_price") %>' />
-                            <br />
+                        <br />
 
-                            <asp:Button ID="Button1" CssClass="btn btn-dark" runat="server" Text="Edit" CommandName="Edit_Button" CommandArgument='<%# Eval("F_id") %>' />
-                            <asp:Button ID="Button2" CssClass="btn btn-danger" runat="server" Text="Delete" CommandName="Delete_Button" CommandArgument='<%# Eval("F_id") %>' />
-                            <br />
-                        </span>
-                    </ItemTemplate>
-                    <LayoutTemplate>
-                        <div class="row" style="" id="itemPlaceholderContainer" runat="server">
-                            <span runat="server" id="itemPlaceholder" />
-                        </div>
-                        <div style="" >
-                        </div>
-                    </LayoutTemplate>
+                        <asp:Button ID="Button1" CssClass="btn btn-dark" runat="server" Text="Edit" CommandName="Edit_Button" CommandArgument='<%# Eval("F_id") %>' />
+                        <asp:Button ID="Button2" CssClass="btn btn-danger" runat="server" Text="Delete" CommandName="Delete_Button" CommandArgument='<%# Eval("F_id") %>' />
+                        <br />
+                    </span>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <div class="row" style="" id="itemPlaceholderContainer" runat="server">
+                        <span runat="server" id="itemPlaceholder" />
+                    </div>
+                    <div style="">
+                    </div>
+                </LayoutTemplate>
 
 
                 </asp:ListView>
