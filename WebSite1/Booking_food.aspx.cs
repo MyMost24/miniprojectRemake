@@ -29,21 +29,55 @@ public partial class Booking_food : System.Web.UI.Page
         //}
     }
 
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+
+    }
+    private void GetDataFromID(string id)
+    {
+        string StrConn = WebConfigurationManager.ConnectionStrings["mydbpConnectionString"].ConnectionString;
+        using (SqlConnection ObjConn = new SqlConnection(StrConn))
+        {
+            ObjConn.Open();
+            using (SqlCommand ObjCM = new SqlCommand())
+            {
+                ObjCM.Connection = ObjConn;
+                ObjCM.CommandType = CommandType.StoredProcedure;
+                ObjCM.CommandText = "GetFoodByID";
+                ObjCM.Parameters.AddWithValue("@F_id", id);
+                ObjCM.ExecuteNonQuery();
+
+                SqlDataReader ObjReader = ObjCM.ExecuteReader();
+                ObjReader.Read();
+
+                
+                ObjReader.Close();
 
 
+            }
+            ObjConn.Close();
+        }
+    }
+
+    protected void ListView1_ItemCommand1(object sender, ListViewCommandEventArgs e)
+    {
+
+        if (e.CommandName == "viewdetail")
+        {
+            Response.Redirect("FoodDetail.aspx?id=" + e.CommandArgument);
+
+        }
+
+    }
 
     protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
     {
-        if (e.CommandName == "concon")
+
+        if (e.CommandName == "viewdetail")
         {
-            int index = int.Parse(e.CommandArgument.ToString());
-            if (index <= ListView1.Items.Count)
-            {
-                ListViewDataItem p_name = ListView1.Items[index];
-                ListView2.DataSource = p_name;
-                ListView2.DataBind();
-                
-            }
+            Response.Redirect("FoodDetail.aspx?id=" + e.CommandArgument);
+
         }
+
     }
 }

@@ -14,7 +14,7 @@ public class Showitem
 {
     public string F_name { get; set; }
     public int F_id { get; set; }
-    public int Bill_id { get; set; }
+    
     public int Amount { get; set; }
     public int F_price { get; set; }
 
@@ -24,6 +24,6 @@ public class Showitem
         this.F_id = F_id;
         this.Amount = Amount;
         this.F_price = F_price;
-        this.Bill_id = Bill_id;
+        
     }
 }
